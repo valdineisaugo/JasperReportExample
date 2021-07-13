@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio02" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3204bb9a-4adc-47f3-9171-7db8c696b53a">
+	<parameter name="texto01" class="java.lang.String"/>
+	<parameter name="texto02" class="java.lang.String"/>
+	<parameter name="texto03" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="-2" y="0" width="556" height="30" uuid="db7f9f36-82ea-4794-87d8-c69c7e1a29fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Meu Relatório em Java]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="30" width="556" height="30" uuid="52b8c9c3-4e9e-4f08-bf79-bd34598a5e02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Unifaesp]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-3" y="74" width="557" height="1" uuid="897ced8b-52a0-47ea-b54d-417c0bfc6ff4"/>
+			</line>
+			<textField>
+				<reportElement x="-2" y="94" width="556" height="30" uuid="d4a70868-fa9d-46cb-8484-81272dc5db6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{texto01}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="135" width="554" height="30" uuid="c527ad5b-e0f2-4024-a1d5-d20ef03e975b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{texto02}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-2" y="180" width="554" height="30" uuid="1e9b3a39-ee68-433b-a253-f377eba677c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{texto03}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
