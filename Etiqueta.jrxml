@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Etiquetajrxml" pageWidth="255" pageHeight="170" columnWidth="227" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="208da88d-aa94-4f23-a018-25db6e81234e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="localizador" class="java.lang.String"/>
+	<parameter name="origem" class="java.lang.String"/>
+	<parameter name="destino" class="java.lang.String"/>
+	<parameter name="endereco" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="142" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="-2" y="0" width="230" height="142" uuid="fdff8184-6929-4bde-9ee5-42632781c767"/>
+			</rectangle>
+			<componentElement>
+				<reportElement x="38" y="110" width="150" height="30" uuid="0d1e34f2-83f2-4d0c-8882-0017b5f6d2e9"/>
+				<jr:Code39 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{localizador}]]></jr:codeExpression>
+				</jr:Code39>
+			</componentElement>
+			<textField>
+				<reportElement x="0" y="4" width="170" height="30" uuid="8cbc84e7-26f5-4514-879d-3a14752afb15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{origem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="34" width="170" height="30" uuid="16cfdea0-aec8-4e2d-9c40-367586291d87"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="70" width="228" height="30" uuid="c01a3ed2-1952-4db2-bcc2-82fcda44327b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endereco}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="170" y="4" width="58" height="60" uuid="13a1883e-a25e-4503-9324-55d5c8bba426"/>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{localizador}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+		</band>
+	</title>
+</jasperReport>

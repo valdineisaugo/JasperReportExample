@@ -47,6 +47,12 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{texto03}]]></textFieldExpression>
 			</textField>
+			<componentElement>
+				<reportElement x="440" y="0" width="103" height="74" uuid="cad62c92-be34-466c-9e76-9b2223085726"/>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA["Unifaesp"]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
 		</band>
 	</title>
 </jasperReport>

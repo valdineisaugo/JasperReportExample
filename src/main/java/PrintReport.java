@@ -15,12 +15,22 @@ public class PrintReport {
         try {
             JasperReport relatorio = JasperCompileManager.compileReport("Relatorio02.jrxml");
             JasperPrint impressao = JasperFillManager.fillReport(relatorio, parametros, new JREmptyDataSource());
-            JasperViewer print = new JasperViewer(impressao, false);
-            print.setTitle("Meu Relatório");
-            print.setVisible(true);
+           // JasperViewer print = new JasperViewer(impressao, false);
+           // print.setTitle("Meu Relatório");
+           // print.setVisible(true);
+            JasperPrintManager.printPage(impressao, 0, false); // -> enviar para impressora padrão
         } catch (JRException e) {
             e.printStackTrace();
         }
 
     }
 }
+
+
+//    JasperReport relatorio = JasperCompileManager.compileReport(localArquivoXml);
+//    JasperPrint impressao = JasperFillManager.fillReport(relatorio, params, new JREmptyDataSource());
+//			JasperViewer jrviewer = new JasperViewer(impressao, false);
+//			jrviewer.setDefaultCloseOperation(JasperViewer.DISPOSE_ON_CLOSE);
+//			jrviewer.setTitle("Relatório de Operações");
+//			jrviewer.setVisible(true);
+//            JasperPrintManager.printPage(impressao, 0, false);
